@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Hello</button>
+    <script>
+        const button =document.getElementById("btn");
+        button.addEventListener("click", function(){
+            console.log("Button Click");
+            
+        })
+        setTimeout(()=> console.log("Execute after 3 Sec"),3000);
+    </script>
+</body>
+</html>
