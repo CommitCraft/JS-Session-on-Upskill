@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 15</title>
+</head>
+<body>
+    <script>
+        function add(a,b, cb){
+          let  res =  a + b;
+            cb(res);
+            // return showResult(res);
+        }
+
+        // add(2,4, function (val){
+        //     console.log(val);
+        // });
+
+        // add(2,4, (val)=>console.log(val));
+            
+        // function showResult(val){
+        //     console.log(`The sum is:${val}`);   
+        // }
+
+        function mainFunction(callback){
+            console.log('performing main operation');
+
+            setTimeout(function(){
+                callback("Operation completed")
+            }, 3000)
+            
+        }
+
+        function callbackFunction(result){
+            console.log("Reslut:"+result);
+            
+        }
+
+        mainFunction(callbackFunction);
+    </script>
+</body>
+</html>
