@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jssession-8</title>
+</head>
+<body>
+    <div id="obj"></div>
+    <script>
+       
+       const person = {
+    firstName: "mansi",
+    lastName: "Prajapati",
+    age: 20,
+    city: "Mumbai"
+  };
+  console.log(person);
+
+// console.log(person.firstName);  // Dot notation
+// console.log(person["age"]);     // Bracket notation
+
+// person.job = "Developer";  // Adding a new property
+// person.age = 31;           // Updating an existing property
+// console.log(person);
+
+
+// const student = {
+//     name: "Emma",
+//     greet: function () {
+//       return `Hello, my name is ${this.name}!`;
+//     }
+//   };
+//   console.log(student.greet()); // Output: Hello, my name is Emma!
+
+// const car = {
+//     brand: "Toyota",
+//     model: "Corolla",
+//     getCarInfo: function () {
+//       return `This car is a ${this.brand} ${this.model}.`;
+//     }
+//   };
+//   console.log(car.getCarInfo()); // Output: This car is a Toyota Corolla.
+  
+
+// const user = {
+//     name: "Alice",
+//     sayHello: () => {
+//       console.log(`Hello, I am ${this.name}`);
+//     }
+//   };
+//   user.sayHello(); // Output: Hello, I am undefined (Arrow functions don’t bind `this`)
+
+// const book = {
+//     title: "The Great Gatsby",
+//     author: "F. Scott Fitzgerald",
+//     getSummary: function () {
+//       return `${this.title} is written by ${this.author}.`;
+//     }
+//   };
+//   console.log(book.getSummary()); // Expected Output: The Great Gatsby is written by F. Scott Fitzgerald.
+  
+// const bankAccount = {
+//     accountHolder: "Mansi",
+//     balance: 5000,
+  
+//     deposit: function(amount) {
+//       this.balance += amount;
+//       console.log(`Deposited: $${amount}. New Balance: $${this.balance}`);
+//     },
+  
+//     withdraw: function(amount) {
+//       if (amount > this.balance) {
+//         console.log("Insufficient funds!");
+//       } else {
+//         this.balance -= amount;
+//         console.log(`Withdrawn: $${amount}. New Balance: $${this.balance}`);
+//       }
+//     },
+  
+//     getBalance: function() {
+//       return `Current Balance: $${this.balance}`;
+//     }
+//   };
+  
+//   // Example Usage
+//   bankAccount.deposit(2000);
+//   bankAccount.withdraw(3000);
+//   console.log(bankAccount.getBalance());
+  
+  
+const mysis = new person("nikita", "prjapati", 20);
+
+const mybrother= new person("abc", "prjapati",30);
+
+console.log(mysis);
+console.log(mybrother);
+        
+    </script>
+</body>
