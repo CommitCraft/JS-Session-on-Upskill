@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session 16</title>
+</head>
+<body>
+    <div id="demo">Lodding...</div>
+    <script>
+        // console.log('start');
+        // console.log('middle content');
+        // setTimeout(() => {
+        //  console.log('middle content');
+        // }, 3000);
+        // console.log('End');
+    //     setInterval(() => {
+    //         console.log('print the data..');  
+    //     }, 2000);
+    //  clearInterval();
+
+    // let count = 10;
+
+    // let countdown = setInterval(()=>{
+    //     console.log(count);
+    //     count--;
+
+    //     if(count <= 0){
+    //         clearInterval(countdown);
+    //         console.log("'Time's up!");   
+    //     }
+    // })
+
+    let images = ["🌅", "🌄", "🌆", "🌃"];
+    let i =0;
+
+    let sideshow = setInterval(()=>{
+        if( images[i]){
+            console.log('Displing image', images[i]);
+            i = i+ 1 % 4;  
+        }else{
+            clearInterval(sideshow)
+        }
+        console.log(i);
+        
+    }, 3000)
+
+
+        
+    </script>
+</body>
+</html>
