@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web storage</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name="user_name" id="user_name" />
+        <button type="submit" id="submitBtn"> Submit </button>
+    </form>
+
+    <script>
+        // window.onstorage = (e) =>{
+        //     alert('changed')
+        //     console.log(e);    
+        // }
+
+    //     const viewedArticles = JSON.parse(localStorage.getItem("viewedArticles")) || [];
+
+    //     function trackArticles(article){
+    //         if(!viewedArticles.includes(article)){
+    //             if(viewedArticles.length >=3){
+    //                 viewedArticles.shift();
+    //             }
+    //             viewedArticles.push(article);
+    //             localStorage.setItem('viewedArticles', JSON.stringify(viewedArticles));
+    //         }
+    //     }
+
+    //     trackArticles('Article 1')
+    //     trackArticles('Article 2')
+    //     trackArticles('Article 3')
+    //     trackArticles('Article 4')
+    //     trackArticles('Article 5')
+    //     trackArticles('Article 6')
+        
+    //    console.log('Recently viewed', JSON.parse(localStorage.getItem("viewedArticles")));
+       
+    // const inputfield = document.getElementById("user_name");
+    // inputfield.value = localStorage.getItem("user_name") || "";
+    // inputfield.addEventListener('input',() =>{
+    //     localStorage.setItem('user_name', inputfield.value);
+    // })
+
+    const form = document.getElementById('myForm')
+    const submitBtn = document.getElementById('submitBtn')
+
+    if(sessionStorage.getItem('formSubmitted')){
+        submitBtn.disabled = true;
+    }
+
+    form.addEventListener('submit', () =>{
+        sessionStorage.setItem('formSubmitted', 'true')
+        submitBtn.disabled = true;
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session 20</title>
+    <style>
+        body.dark-mode {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button id="mybutton">Button</button>
+    <input type="text" name="keyboard" id="keyboard">
+     -->
+     <!-- <button id="toggleMode">Toggle Dark Mode</button> -->
+    <!-- <img id="thumb" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" width="250" />
+    <img id="preview" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png" style="display: none;position: absolute;" width="450" /> -->
+
+    <textarea id="textArea" placeholder="try copy, cutting or pasting text here ..." cols="80" rows="10"></textarea>
+    <div class="log" id="log"> Log History
+    </div>
+   <script>
+    // document.getElementById("mybutton").addEventListener('click', function() {
+    //     alert('Button was clicked!')
+    // })
+
+    // document.getElementById("mybutton").addEventListener('mousedown',function(e){
+    //     console.log(e.type);   
+    // })
+    // document.getElementById("mybutton").addEventListener('mouseout',function(e){
+    //     console.log(e.type);   
+    // })
+    // document.getElementById("keyboard").addEventListener('keypress',function () {
+    //     console.log(this.value);  
+    // })
+    // document.getElementById("toggleMode").addEventListener("click", function () {
+    //     document.body.classList.toggle("dark-mode")
+    // })
+
+    // const thumb = document.getElementById("thumb");
+    // const preview = document.getElementById("preview");
+
+    // thumb.addEventListener('mouseover', function(e){
+    //     preview.style.display = 'block';
+    //     preview.style.left = e.pageX + "px";
+    //     preview.style.top = e.pageY + "px";
+    // })
+
+    // thumb.addEventListener('mouseout', function(){
+    //     preview.style.display = "none";
+    // })
+    const textArea = document.getElementById('textArea')
+    const log = document.getElementById('log');
+
+   
+
+    function logEvent(action, text){
+        let newLog = document.createElement("p")
+        newLog.textContent = `${action}: "${text}"`
+        log.appendChild(newLog)
+    }
+
+    textArea.addEventListener("copy",(e)=>{
+        let copiedText = window.getSelection().toString();
+        logEvent("Copied", copiedText);
+    })
+
+    textArea.addEventListener("cut",(e)=>{
+        let cutText = window.getSelection().toString();
+        logEvent("Cut", cutText);
+    })
+
+    textArea.addEventListener("paste",(e)=>{
+        console.log(e);
+        let pastedText = (e.clipboardData || window.clipboardData).getData("text")
+        logEvent("Pasted", pastedText);
+    })
+   </script> 
+</body>
+</html>
