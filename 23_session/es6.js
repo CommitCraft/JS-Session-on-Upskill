@@ -65,4 +65,26 @@ const c = 30;
     }
     console.log(greet()); // Hello, Guest!
     console.log(greet("Alice")); // Hello, Alice!
-    
+
+    // Destructuring assignment
+   // array destructuring
+   const arr = [1, 2, 3];
+
+   const [x, y, z] = arr; // Destructuring assignment
+    console.log(x, y, z); // 1 2 3
+
+    let first=numbers[0];
+    let second=numbers[1];
+
+    //object destructuring
+    const person = {
+        name: "Alice",
+        age: 25,
+        city: "New York"
+    };
+// without destructuring
+    let name1 = person.name;
+    let age1 = person.age;
+
+    let {name, age} = person; // Destructuring assignment
+    console.log(name, age); // Alice 25
