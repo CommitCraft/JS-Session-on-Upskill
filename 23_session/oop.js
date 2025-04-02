@@ -1,0 +1,1 @@
+// ES6 introduces the class syntax for defining objects and inheritance.
